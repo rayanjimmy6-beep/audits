@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Secure Auth Audit Report</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Secure Authentication Audit</h1>
+
+<div class="card">
+
+<label>Multi-Factor Authentication (MFA)</label>
+<select id="mfa">
+<option value="20">Enabled</option>
+<option value="0">Disabled</option>
+</select>
+
+<label>Password Length</label>
+<select id="password">
+<option value="20">12+ Characters</option>
+<option value="10">8-11 Characters</option>
+<option value="0">Less than 8</option>
+</select>
+
+<label>Password Rotation</label>
+<select id="rotation">
+<option value="20">Every 90 Days</option>
+<option value="10">Every 180 Days</option>
+<option value="0">Never</option>
+</select>
+
+<label>Account Lockout Policy</label>
+<select id="lockout">
+<option value="20">Enabled</option>
+<option value="0">Disabled</option>
+</select>
+
+<label>SSO Integration</label>
+<select id="sso">
+<option value="20">Enabled</option>
+<option value="0">Disabled</option>
+</select>
+
+<button onclick="generateReport()">
+Generate Audit Report
+</button>
+
+</div>
+
+<div class="card" id="reportCard">
+<h2>Audit Report</h2>
+<div id="report"></div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
